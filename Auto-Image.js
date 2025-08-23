@@ -284,6 +284,7 @@
       captchaFailed: "❌ Turnstile token generation failed. Trying fallback method...",
       automation: "Automation",
       noChargesThreshold: "⌛ Waiting for charges to reach {threshold}. Currently {current}. Next in {time}...",
+      scriptversion: "Version: 1.0.0",
     },
   }
 
@@ -3358,6 +3359,9 @@
             </div>
           </div>
         </div>
+
+        <!-- Debug Information -->
+        <span>${Utils.t("scriptversion")}</span>
       </div>
     `
 
