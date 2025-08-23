@@ -90,7 +90,7 @@
     // Optimized CSS Classes for reuse
     CSS_CLASSES: {
       BUTTON_PRIMARY: `
-        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        background: linear-gradient(135deg, #6474ccff 0%, #3d4fb3ff 100%);
         color: white; border: none; border-radius: 8px; padding: 10px 16px;
         cursor: pointer; font-weight: 500; transition: all 0.3s ease;
         display: flex; align-items: center; gap: 8px;
@@ -284,7 +284,7 @@
       captchaFailed: "❌ Turnstile token generation failed. Trying fallback method...",
       automation: "Automation",
       noChargesThreshold: "⌛ Waiting for charges to reach {threshold}. Currently {current}. Next in {time}...",
-      scriptversion: "Version: 1.0.0",
+      scriptversion: "Version: 1.0.1 | Maintained by Glacial_Dreamer",
     },
   }
 
@@ -3624,14 +3624,14 @@
           height: 18px;
           border-radius: 50%;
           background: white;
-          box-shadow: 0 3px 6px rgba(0,0,0,0.3), 0 0 0 2px #4facfe;
+          box-shadow: 0 3px 6px rgba(0,0,0,0.3), 0 0 0 2px #3a7eb9ff;
           cursor: pointer;
           transition: all 0.2s ease;
         }
 
         #speedSlider::-webkit-slider-thumb:hover, #overlayOpacitySlider::-webkit-slider-thumb:hover {
           transform: scale(1.2);
-          box-shadow: 0 4px 8px rgba(0,0,0,0.4), 0 0 0 3px #4facfe;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.4), 0 0 0 3px #3675acff;
         }
 
         #speedSlider::-moz-range-thumb, #overlayOpacitySlider::-moz-range-thumb {
@@ -3639,7 +3639,7 @@
           height: 18px;
           border-radius: 50%;
           background: white;
-          box-shadow: 0 3px 6px rgba(0,0,0,0.3), 0 0 0 2px #4facfe;
+          box-shadow: 0 3px 6px rgba(0,0,0,0.3), 0 0 0 2px #3b81beff;
           cursor: pointer;
           border: none;
           transition: all 0.2s ease;
