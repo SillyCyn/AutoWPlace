@@ -90,7 +90,7 @@
     // Optimized CSS Classes for reuse
     CSS_CLASSES: {
       BUTTON_PRIMARY: `
-        background: linear-gradient(135deg, #333177ff 0%, #17288bff 100%);
+        background: linear-gradient(135deg, #615fa1ff 0%, #644da3ff 100%);
         color: white; border: none; border-radius: 8px; padding: 10px 16px;
         cursor: pointer; font-weight: 500; transition: all 0.3s ease;
         display: flex; align-items: center; gap: 8px;
@@ -284,7 +284,7 @@
       captchaFailed: "❌ Turnstile token generation failed. Trying fallback method...",
       automation: "Automation",
       noChargesThreshold: "⌛ Waiting for charges to reach {threshold}. Currently {current}. Next in {time}...",
-      scriptversion: "Version: 1.0.1 | Maintained by Glacial_Dreamer",
+      scriptversion: "Version: 1.0.2 | Maintained by Glacial_Dreamer",
     },
   }
 
