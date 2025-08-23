@@ -117,7 +117,7 @@
         secondary: "#000000ff",
         accent: "#000000ff",
         text: "#ffffff",
-        highlight: "#000000ff",
+        highlight: "#a1a0f0ff",
         success: "#00ff00",
         error: "#ff0000",
         warning: "#ffaa00",
