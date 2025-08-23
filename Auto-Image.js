@@ -128,9 +128,9 @@
         boxShadow: "0 8px 32px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.1)",
         backdropFilter: "blur(10px)",
         animations: {
-          glow: true,
+          glow: false,
           scanline: false,
-          pixelBlink: true,
+          pixelBlink: false,
         },
       },
       "Neon Retro": {
@@ -3403,7 +3403,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(135deg, #33438bff 0%, #56307cff 100%);
       border: none;
       border-radius: 16px;
       padding: 0;
@@ -3449,7 +3449,7 @@
         <!-- Automation Section -->
         <div style="margin-bottom: 25px;">
           <label style="display: block; margin-bottom: 12px; color: white; font-weight: 500; font-size: 16px; display: flex; align-items: center; gap: 8px;">
-            <i class="fas fa-robot" style="color: #4facfe; font-size: 16px;"></i>
+            <i class="fas fa-robot" style="color: #3473aaff; font-size: 16px;"></i>
             ${Utils.t("automation")}
           </label>
           <!-- Turnstile generator is always enabled - no toggle needed -->
@@ -3459,7 +3459,7 @@
         <!-- Overlay Settings Section -->
         <div style="margin-bottom: 25px;">
           <label style="display: block; margin-bottom: 12px; color: white; font-weight: 500; font-size: 16px; display: flex; align-items: center; gap: 8px;">
-            <i class="fas fa-eye" style="color: #48dbfb; font-size: 16px;"></i>
+            <i class="fas fa-eye" style="color: #3099b1ff; font-size: 16px;"></i>
             Overlay Settings
           </label>
           <div style="background: rgba(255,255,255,0.1); border-radius: 12px; padding: 18px; border: 1px solid rgba(255,255,255,0.1);">
@@ -3485,7 +3485,7 @@
         <!-- Speed Control Section -->
         <div style="margin-bottom: 25px;">
           <label style="display: block; margin-bottom: 12px; color: white; font-weight: 500; font-size: 16px; display: flex; align-items: center; gap: 8px;">
-            <i class="fas fa-tachometer-alt" style="color: #4facfe; font-size: 16px;"></i>
+            <i class="fas fa-tachometer-alt" style="color: #3980beff; font-size: 16px;"></i>
             ${Utils.t("paintingSpeed")}
           </label>
           <div style="background: rgba(255,255,255,0.1); border-radius: 12px; padding: 18px; border: 1px solid rgba(255,255,255,0.1);">
@@ -3494,7 +3494,7 @@
                 style="
                   flex: 1;
                   height: 8px;
-                  background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+                  background: linear-gradient(to right, #397fbdff 0%, #03a5adff 100%);
                   border-radius: 4px;
                   outline: none;
                   -webkit-appearance: none;
@@ -3503,7 +3503,7 @@
               <div id="speedValue" style="
                 min-width: 70px;
                 text-align: center;
-                background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+                background: linear-gradient(135deg, #397cb6ff 0%, #01aab3ff 100%);
                 padding: 8px 12px;
                 border-radius: 8px;
                 color: white;
@@ -3513,7 +3513,7 @@
                 border: 1px solid rgba(255,255,255,0.2);
               ">${CONFIG.PAINTING_SPEED.DEFAULT} px/s</div>
             </div>
-            <div style="display: flex; justify-content: space-between; color: rgba(255,255,255,0.7); font-size: 11px; margin-top: 8px;">
+            <div style="display: flex; justify-content: space-between; color: rgba(192, 191, 191, 0.7); font-size: 11px; margin-top: 8px;">
               <span><i class="fas fa-turtle"></i> ${CONFIG.PAINTING_SPEED.MIN}</span>
               <span><i class="fas fa-rabbit"></i> ${CONFIG.PAINTING_SPEED.MAX}</span>
             </div>
@@ -3528,7 +3528,7 @@
         <!-- Theme Selection Section -->
         <div style="margin-bottom: 25px;">
           <label style="display: block; margin-bottom: 12px; color: white; font-weight: 500; font-size: 16px; display: flex; align-items: center; gap: 8px;">
-            <i class="fas fa-palette" style="color: #f093fb; font-size: 16px;"></i>
+            <i class="fas fa-palette" style="color: #a866afff; font-size: 16px;"></i>
             ${Utils.t("themeSettings")}
           </label>
           <div style="background: rgba(255,255,255,0.1); border-radius: 12px; padding: 18px; border: 1px solid rgba(255,255,255,0.1);">
