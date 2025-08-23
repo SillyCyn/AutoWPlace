@@ -90,7 +90,7 @@
     // Optimized CSS Classes for reuse
     CSS_CLASSES: {
       BUTTON_PRIMARY: `
-        background: linear-gradient(135deg, #6474ccff 0%, #3d4fb3ff 100%);
+        background: linear-gradient(135deg, #333177ff 0%, #17288bff 100%);
         color: white; border: none; border-radius: 8px; padding: 10px 16px;
         cursor: pointer; font-weight: 500; transition: all 0.3s ease;
         display: flex; align-items: center; gap: 8px;
@@ -106,7 +106,7 @@
         backdrop-filter: blur(5px);
       `,
       GRADIENT_TEXT: `
-        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        background: linear-gradient(135deg, #334facff 0%, #293994ff 100%);
         -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         background-clip: text; font-weight: bold;
       `
@@ -3469,7 +3469,7 @@
                    <span style="font-weight: 500; font-size: 13px;">Overlay Opacity</span>
                    <div id="overlayOpacityValue" style="min-width: 40px; text-align: center; background: rgba(0,0,0,0.2); padding: 4px 8px; border-radius: 6px; font-size: 12px;">${Math.round(state.overlayOpacity * 100)}%</div>
                 </div>
-                <input type="range" id="overlayOpacitySlider" min="0.1" max="1" step="0.05" value="${state.overlayOpacity}" style="width: 100%; -webkit-appearance: none; height: 8px; background: linear-gradient(to right, #48dbfb 0%, #d3a4ff 100%); border-radius: 4px; outline: none; cursor: pointer;">
+                <input type="range" id="overlayOpacitySlider" min="0.1" max="1" step="0.05" value="${state.overlayOpacity}" style="width: 100%; -webkit-appearance: none; height: 8px; background: linear-gradient(to right, #349fb8ff 0%, #8868a7ff 100%); border-radius: 4px; outline: none; cursor: pointer;">
               </div>
               <!-- Blue Marble Toggle -->
               <label for="enableBlueMarbleToggle" style="display: flex; align-items: center; justify-content: space-between; cursor: pointer;">
