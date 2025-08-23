@@ -3008,7 +3008,7 @@
         z-index: 10001;
         min-width: 400px;
         max-width: 500px;
-        background: ${theme.primary};
+        background: ${theme.secondary};
         border: ${theme.borderWidth} ${theme.borderStyle} ${theme.accent};
         border-radius: ${theme.borderRadius};
         box-shadow: ${theme.boxShadow};
