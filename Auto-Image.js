@@ -114,10 +114,10 @@
     THEMES: {
       "Classic Autobot": {
         primary: "#261a6bff",
-        secondary: "#3831a5ff",
+        secondary: "#e1dfffff",
         accent: "#3d3581ff",
         text: "#ffffff",
-        highlight: "#a799e2ff",
+        highlight: "#e1dcf3ff",
         success: "#00ff00",
         error: "#ff0000",
         warning: "#ffaa00",
