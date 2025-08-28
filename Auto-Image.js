@@ -4098,7 +4098,7 @@
               <div id="speedValue" style="
                 min-width: 100px;
                 text-align: center;
-                background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+                background: linear-gradient(135deg, #3677b1ff 0%, #008b92ff 100%);
                 padding: 8px 12px;
                 border-radius: 8px;
                 color: white;
@@ -4187,8 +4187,8 @@
               <span>minute(s)</span>
             </div>
             <div style="display:flex; gap:10px;">
-              <button id="notifRequestPermBtn" class="wplace-btn wplace-btn-secondary" style="flex:1;"><i class="fas fa-unlock"></i><span>Grant Permission</span></button>
-              <button id="notifTestBtn" class="wplace-btn" style="flex:1;"><i class="fas fa-bell"></i><span>Test</span></button>
+              <button id="notifRequestPermBtn" class="BUTTON_SECONDARY" style="flex:1;"><i class="fas fa-unlock"></i><span>Grant Permission</span></button>
+              <button id="notifTestBtn" class="BUTTON_SECONDARY" style="flex:1;"><i class="fas fa-bell"></i><span>Test</span></button>
             </div>
           </div>
         </div>
