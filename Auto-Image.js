@@ -883,7 +883,7 @@
       setTurnstileToken(token);
       if (document.querySelector("#statusText")?.textContent.includes("CAPTCHA")) {
         Utils.showAlert("Token captured successfully! You can start the bot now.", "success");
-        updateUI("colorsFound", "success", { count: state.availableColors.length });
+        updateUI("colorsFound", "warning", { count: state.availableColors.length });
       }
     }
   });
@@ -2780,9 +2780,9 @@
       .wplace-status-section {
         margin-bottom: 12px;
         padding: 8px;
-        background: rgba(255,255,255,0.03);
+        background: rgba(62, 64, 165, 0.03);
         border-radius: ${theme.borderRadius};
-        border: 1px solid rgba(255,255,255,0.1);
+        border: 1px solid rgba(63, 61, 168, 0.1);
       }
 
       .wplace-section {
