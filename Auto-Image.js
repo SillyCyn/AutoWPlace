@@ -287,6 +287,7 @@
       pixelsPerSecond: "pixels/second",
       speedSetting: "Speed: {speed} pixels/sec",
       settings: "Settings",
+      updateLogs: "Update Logs",
       botSettings: "Bot Settings",
       close: "Close",
       language: "Language",
@@ -3706,6 +3707,9 @@
           <span>${Utils.t("title")}</span>
         </div>
         <div class="wplace-header-controls">
+         <button id="updatesBtn" class="wplace-header-btn" title="${Utils.t("updateLogs")}">
+            <i class="fas fa-info"></i>
+          </button>
           <button id="settingsBtn" class="wplace-header-btn" title="${Utils.t("settings")}">
             <i class="fas fa-cog"></i>
           </button>
@@ -3851,6 +3855,40 @@
       </div>
     `
 
+    // Update logs container
+    const updatelogscontainer = document.createElement("div")
+    updatelogscontainer.id = "wplace-updates-container"
+
+    // Apply theme-based styling
+    const updatethemeBackground = theme.primary ? 
+      `linear-gradient(135deg, ${theme.primary} 0%, ${theme.secondary || theme.primary} 100%)` : 
+      `linear-gradient(135deg, #667eea 0%, #764ba2 100%)`
+    
+    updatelogscontainer.style.cssText = `
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: ${updatethemeBackground};
+      border: ${theme.borderWidth || '1px'} ${theme.borderStyle || 'solid'} ${theme.accent || 'rgba(69, 58, 173, 0.1)'};
+      border-radius: ${theme.borderRadius || '16px'};
+      padding: 0;
+      z-index: 10002;
+      display: none;
+      min-width: 420px;
+      max-width: 480px;
+      color: ${theme.text || 'white'};
+      font-family: ${theme.fontFamily || "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"};
+      box-shadow: ${theme.boxShadow || '0 20px 40px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.1)'};
+      backdrop-filter: ${theme.backdropFilter || 'blur(10px)'};
+      overflow: hidden;
+      animation: settingsSlideIn 0.4s ease-out;
+      ${theme.animations?.glow ? `
+        box-shadow: ${theme.boxShadow || '0 20px 40px rgba(0,0,0,0.3)'}, 
+                   0 0 30px ${theme.highlight || theme.neon || '#006969ff'};
+      ` : ''}
+    `
+
     // Modern Settings Container with Theme Support
     // Use the theme variable already declared at the top of createUI function
     const settingsContainer = document.createElement("div")
@@ -3867,7 +3905,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       background: ${themeBackground};
-      border: ${theme.borderWidth || '1px'} ${theme.borderStyle || 'solid'} ${theme.accent || 'rgba(255,255,255,0.1)'};
+      border: ${theme.borderWidth || '1px'} ${theme.borderStyle || 'solid'} ${theme.accent || 'rgba(69, 58, 173, 0.1)'};
       border-radius: ${theme.borderRadius || '16px'};
       padding: 0;
       z-index: 10002;
@@ -3888,9 +3926,9 @@
 
     settingsContainer.innerHTML = `
       <div class="wplace-settings-header" style="
-        background: ${theme.accent ? `${theme.accent}33` : 'rgba(255,255,255,0.1)'}; 
+        background: ${theme.accent ? `${theme.accent}33` : 'rgba(92, 90, 197, 0.1)'}; 
         padding: 20px; 
-        border-bottom: 1px solid ${theme.accent || 'rgba(255,255,255,0.1)'}; 
+        border-bottom: 1px solid ${theme.accent || 'rgba(103, 87, 197, 0.1)'}; 
         cursor: move;
         ${theme.animations?.scanline ? `
           position: relative;
@@ -3950,7 +3988,7 @@
             this.style.transform='scale(1.1)';
             ${theme.animations?.glow ? `this.style.boxShadow='0 0 20px ${theme.error || '#ff0000'}';` : ''}
           " onmouseout="
-            this.style.background='${theme.accent ? `${theme.accent}66` : 'rgba(255,255,255,0.1)'}'; 
+            this.style.background='${theme.accent ? `${theme.accent}66` : 'rgba(87, 89, 192, 0.1)'}'; 
             this.style.transform='scale(1)';
             ${theme.animations?.glow ? `this.style.boxShadow='0 0 10px ${theme.error || '#ff0000'}33';` : ''}
           ">✕</button>
@@ -3962,16 +4000,16 @@
         <!-- Token Source Selection -->
         <div style="margin-bottom: 25px;">
           <label style="display: block; margin-bottom: 12px; color: white; font-weight: 500; font-size: 16px; display: flex; align-items: center; gap: 8px;">
-            <i class="fas fa-key" style="color: #2a5c88ff; font-size: 16px;"></i>
+            <i class="fas fa-key" style="color: #2a3888ff; font-size: 16px;"></i>
             Token Source
           </label>
-          <div style="background: rgba(255,255,255,0.1); border-radius: 12px; padding: 18px; border: 1px solid rgba(255,255,255,0.1);">
+          <div style="background: rgba(76, 74, 190, 0.1); border-radius: 12px; padding: 18px; border: 1px solid rgba(62, 74, 185, 0.1);">
             <select id="tokenSourceSelect" style="
               width: 100%;
               padding: 12px 16px;
-              background: rgba(255,255,255,0.15);
+              background: rgba(81, 57, 167, 0.15);
               color: white;
-              border: 1px solid rgba(255,255,255,0.2);
+              border: 1px solid rgba(89, 81, 197, 0.2);
               border-radius: 8px;
               font-size: 14px;
               outline: none;
@@ -4006,12 +4044,12 @@
             Overlay Settings
           </label>
           <div style="
-            background: ${theme.accent ? `${theme.accent}20` : 'rgba(255,255,255,0.1)'}; 
+            background: ${theme.accent ? `${theme.accent}20` : 'rgba(110, 85, 201, 0.1)'}; 
             border-radius: ${theme.borderRadius || '12px'}; 
             padding: 18px; 
-            border: 1px solid ${theme.accent || 'rgba(255,255,255,0.1)'};
+            border: 1px solid ${theme.accent || 'rgba(85, 78, 180, 0.1)'};
             ${theme.animations?.glow ? `
-              box-shadow: 0 0 15px ${theme.accent || 'rgba(255,255,255,0.1)'}33;
+              box-shadow: 0 0 15px ${theme.accent || 'rgba(89, 87, 192, 0.1)'}33;
             ` : ''}
           ">
               <!-- Opacity Slider -->
@@ -4520,6 +4558,7 @@
     document.body.appendChild(resizeOverlay)
     document.body.appendChild(resizeContainer)
     document.body.appendChild(statsContainer)
+    document.body.appendChild(updatelogscontainer)
     document.body.appendChild(settingsContainer)
 
     const uploadBtn = container.querySelector("#uploadBtn")
