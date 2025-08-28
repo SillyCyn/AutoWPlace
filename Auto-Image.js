@@ -2945,7 +2945,7 @@
       }
       
       .wplace-btn-overlay.active {
-        background: linear-gradient(135deg, #29b6f6 0%, #8e2de2 100%);
+        background: linear-gradient(135deg, #294ff6ff 0%, #3a125cff 100%);
         box-shadow: 0 0 15px #8e2de2;
       }
 
@@ -3707,9 +3707,6 @@
           <span>${Utils.t("title")}</span>
         </div>
         <div class="wplace-header-controls">
-         <button id="updatesBtn" class="wplace-header-btn" title="${Utils.t("updateLogs")}">
-            <i class="fas fa-info"></i>
-          </button>
           <button id="settingsBtn" class="wplace-header-btn" title="${Utils.t("settings")}">
             <i class="fas fa-cog"></i>
           </button>
@@ -3855,40 +3852,6 @@
       </div>
     `
 
-    // Update logs container
-    const updatelogscontainer = document.createElement("div")
-    updatelogscontainer.id = "wplace-updates-container"
-
-    // Apply theme-based styling
-    const updatethemeBackground = theme.primary ? 
-      `linear-gradient(135deg, ${theme.primary} 0%, ${theme.secondary || theme.primary} 100%)` : 
-      `linear-gradient(135deg, #667eea 0%, #764ba2 100%)`
-    
-    updatelogscontainer.style.cssText = `
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: ${updatethemeBackground};
-      border: ${theme.borderWidth || '1px'} ${theme.borderStyle || 'solid'} ${theme.accent || 'rgba(69, 58, 173, 0.1)'};
-      border-radius: ${theme.borderRadius || '16px'};
-      padding: 0;
-      z-index: 10002;
-      display: none;
-      min-width: 420px;
-      max-width: 480px;
-      color: ${theme.text || 'white'};
-      font-family: ${theme.fontFamily || "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"};
-      box-shadow: ${theme.boxShadow || '0 20px 40px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.1)'};
-      backdrop-filter: ${theme.backdropFilter || 'blur(10px)'};
-      overflow: hidden;
-      animation: settingsSlideIn 0.4s ease-out;
-      ${theme.animations?.glow ? `
-        box-shadow: ${theme.boxShadow || '0 20px 40px rgba(0,0,0,0.3)'}, 
-                   0 0 30px ${theme.highlight || theme.neon || '#006969ff'};
-      ` : ''}
-    `
-
     // Modern Settings Container with Theme Support
     // Use the theme variable already declared at the top of createUI function
     const settingsContainer = document.createElement("div")
@@ -4000,16 +3963,16 @@
         <!-- Token Source Selection -->
         <div style="margin-bottom: 25px;">
           <label style="display: block; margin-bottom: 12px; color: white; font-weight: 500; font-size: 16px; display: flex; align-items: center; gap: 8px;">
-            <i class="fas fa-key" style="color: #3146b8ff; font-size: 16px;"></i>
+            <i class="fas fa-key" style="color: #3d56e4ff; font-size: 16px;"></i>
             Token Source
           </label>
-          <div style="background: rgba(81, 77, 204, 0.1); border-radius: 12px; padding: 18px; border: 1px solid rgba(65, 79, 199, 0.1);">
+          <div style="background: rgba(81, 77, 204, 0.1); border-radius: 12px; padding: 18px; border: 1px solid rgba(83, 100, 255, 0.1);">
             <select id="tokenSourceSelect" style="
               width: 100%;
               padding: 12px 16px;
-              background: rgba(97, 68, 204, 0.15);
+              background: rgba(122, 85, 255, 0.15);
               color: white;
-              border: 1px solid rgba(56, 41, 255, 0.2);
+              border: 1px solid rgba(84, 72, 255, 0.2);
               border-radius: 8px;
               font-size: 14px;
               outline: none;
@@ -4558,7 +4521,6 @@
     document.body.appendChild(resizeOverlay)
     document.body.appendChild(resizeContainer)
     document.body.appendChild(statsContainer)
-    document.body.appendChild(updatelogscontainer)
     document.body.appendChild(settingsContainer)
 
     const uploadBtn = container.querySelector("#uploadBtn")
@@ -4730,28 +4692,6 @@
       statsContainer.style.display = "block";
       statsBtn.innerHTML = '<i class="fas fa-chart-line"></i>';
       statsBtn.title = "Hide Stats";
-    }
-
-    // Update logs
-    const updatelogsBtn = container.querySelector("#updatesBtn")
-
-    if (updatelogsBtn) {
-      updatelogsBtn.addEventListener("click", () => {
-        const isVisible = updatelogscontainer.style.display !== "none"
-        if (isVisible) {
-          updatelogscontainer.style.animation = "settingsFadeOut 0.3s ease-out forwards"
-          setTimeout(() => {
-            updatelogscontainer.style.display = "none"
-            updatelogscontainer.style.animation = ""
-          }, 300)
-        } else {
-          updatelogscontainer.style.top = "50%"
-          updatelogscontainer.style.left = "50%"
-          updatelogscontainer.style.transform = "translate(-50%, -50%)"
-          updatelogscontainer.style.display = "block"
-          updatelogscontainer.style.animation = "settingsSlideIn 0.4s ease-out"
-        }
-      })
     }
 
     const settingsBtn = container.querySelector("#settingsBtn")
