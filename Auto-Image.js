@@ -2550,6 +2550,7 @@
     style.setAttribute("data-wplace-theme", "true")
 
     // Style contexts
+    // THEME CONFIGURATION STUFF
 
     style.textContent = `
       ${theme.animations.glow
@@ -4056,6 +4057,7 @@
           </div>
         </div>
 
+        
         <!-- Speed Control Section -->
         <div style="margin-bottom: 25px;">
           <label style="display: block; margin-bottom: 12px; color: white; font-weight: 500; font-size: 16px; display: flex; align-items: center; gap: 8px;">
@@ -4190,8 +4192,8 @@
               <span>minute(s)</span>
             </div>
             <div style="display:flex; gap:10px;">
-              <button id="notifRequestPermBtn" class="wplace-btn wplace-btn-secondary" style="flex:1;"><i class="fas fa-unlock"></i><span>Grant Permission</span></button>
-              <button id="notifTestBtn" class="wplace-btn" style="flex:1;"><i class="fas fa-bell"></i><span>Test</span></button>
+              <button id="notifRequestPermBtn" class="wplace-btn wplace-btn-secondary" style="flex:0.2;"><i class="fas fa-unlock"></i><span>Grant Permission</span></button>
+              <button id="notifTestBtn" class="wplace-btn" style="flex:0.2;"><i class="fas fa-bell"></i><span>Test</span></button>
             </div>
           </div>
         </div>
