@@ -1364,6 +1364,7 @@
         success: "background: linear-gradient(135deg, #1d8347ff, #19743fff);",
         warning: "background: linear-gradient(135deg, #f39c12, #e67e22);",
         error: "background: linear-gradient(135deg, #e74c3c, #c0392b);",
+        astral: "background: linear-gradient(135deg, #6152b8ff, #4a35c2ff);",
       }
 
       alertDiv.style.cssText += colors[type] || colors.info
@@ -7020,6 +7021,7 @@
     };
     // Delay to ensure resize UI built
     setTimeout(advancedInit, 500);
+    Utils.showAlert("Welcome, the newest additions are found in the settings.", "astral");
     
     // Add cleanup on page unload
     window.addEventListener('beforeunload', () => {
