@@ -1338,6 +1338,8 @@
       return text
     },
 
+    // MAIN NOTIF OVERLAY
+
     showAlert: (message, type = "info") => {
       const alertDiv = document.createElement("div")
       alertDiv.style.cssText = `
@@ -1358,8 +1360,8 @@
       `
 
       const colors = {
-        info: "background: linear-gradient(135deg, #3498db, #2980b9);",
-        success: "background: linear-gradient(135deg, #27ae60, #229954);",
+        info: "background: linear-gradient(135deg, #2772a5ff, #194c6eff);",
+        success: "background: linear-gradient(135deg, #1d8347ff, #19743fff);",
         warning: "background: linear-gradient(135deg, #f39c12, #e67e22);",
         error: "background: linear-gradient(135deg, #e74c3c, #c0392b);",
       }
@@ -2713,7 +2715,7 @@
       .wplace-header {
         padding: ${CONFIG.currentTheme === "Neon Retro" ? "8px 12px" : "8px 12px"};
         background: ${CONFIG.currentTheme === "Classic Autobot"
-        ? `linear-gradient(135deg, ${theme.secondary} 0%, #2a2a2a 100%)`
+        ? `linear-gradient(135deg, ${theme.secondary} 0%, #3a3c8aff 100%)`
         : theme.secondary
       };
         color: ${theme.highlight};
@@ -2724,7 +2726,7 @@
         align-items: center;
         cursor: move;
         user-select: none;
-        border-bottom: ${CONFIG.currentTheme === "Neon Retro" ? "2px" : "1px"} solid ${CONFIG.currentTheme === "Classic Autobot" ? "rgba(255,255,255,0.1)" : theme.text};
+        border-bottom: ${CONFIG.currentTheme === "Neon Retro" ? "2px" : "1px"} solid ${CONFIG.currentTheme === "Classic Autobot" ? "rgba(40, 45, 121, 0.1)" : theme.text};
         ${CONFIG.currentTheme === "Classic Autobot" ? "text-shadow: 0 1px 2px rgba(0,0,0,0.5);" : "text-transform: uppercase; letter-spacing: 1px;"}
         transition: background 0.2s ease;
         position: relative;
@@ -2788,7 +2790,7 @@
       .wplace-section {
         margin-bottom: ${CONFIG.currentTheme === "Neon Retro" ? "12px" : "12px"};
         padding: 12px;
-        background: rgba(255,255,255,0.03);
+        background: rgba(61, 50, 165, 0.03);
         border-radius: ${theme.borderRadius};
         border: 1px solid rgba(255,255,255,0.1);
       }
@@ -2836,10 +2838,10 @@
         font-family: ${theme.fontFamily};
         ${CONFIG.currentTheme === "Neon Retro" ? "text-transform: uppercase; letter-spacing: 1px; image-rendering: pixelated;" : ""}
         background: ${CONFIG.currentTheme === "Classic Autobot"
-        ? `linear-gradient(135deg, ${theme.accent} 0%, #4338a1ff 100%)`
+        ? `linear-gradient(135deg, ${theme.accent} 0%, #41398bff 100%)`
         : theme.accent
       };
-        ${CONFIG.currentTheme === "Classic Autobot" ? "border: 1px solid rgba(96, 66, 179, 0.52);" : ""}
+        ${CONFIG.currentTheme === "Classic Autobot" ? "border: 1px solid rgba(77, 59, 128, 0.52);" : ""}
       }
 
       ${CONFIG.currentTheme === "Classic Autobot"
@@ -2851,7 +2853,7 @@
         left: -100%;
         width: 100%;
         height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(53, 61, 168, 0.1), transparent);
+        background: linear-gradient(90deg, transparent, rgba(49, 54, 133, 0.1), transparent);
         transition: left 0.5s ease;
       }
       .wplace-btn:hover:not(:disabled)::before {
@@ -2865,7 +2867,7 @@
         left: -100%;
         width: 100%;
         height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(51, 62, 156, 0.2), transparent);
+        background: linear-gradient(90deg, transparent, rgba(56, 63, 128, 0.2), transparent);
         transition: left 0.5s;
       }
       .wplace-btn:hover::before {
