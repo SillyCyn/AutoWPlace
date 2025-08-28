@@ -7021,7 +7021,8 @@
     };
     // Delay to ensure resize UI built
     setTimeout(advancedInit, 500);
-    Utils.showAlert("Welcome, the newest additions are found in the settings.", "astral");
+    
+    setTimeout(Utils.showAlert("Welcome, the newest additions are found in the settings.", "astral"), 1000);
     
     // Add cleanup on page unload
     window.addEventListener('beforeunload', () => {
