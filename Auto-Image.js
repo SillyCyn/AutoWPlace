@@ -4000,16 +4000,16 @@
         <!-- Token Source Selection -->
         <div style="margin-bottom: 25px;">
           <label style="display: block; margin-bottom: 12px; color: white; font-weight: 500; font-size: 16px; display: flex; align-items: center; gap: 8px;">
-            <i class="fas fa-key" style="color: #2a3888ff; font-size: 16px;"></i>
+            <i class="fas fa-key" style="color: #3146b8ff; font-size: 16px;"></i>
             Token Source
           </label>
-          <div style="background: rgba(76, 74, 190, 0.1); border-radius: 12px; padding: 18px; border: 1px solid rgba(62, 74, 185, 0.1);">
+          <div style="background: rgba(81, 77, 204, 0.1); border-radius: 12px; padding: 18px; border: 1px solid rgba(65, 79, 199, 0.1);">
             <select id="tokenSourceSelect" style="
               width: 100%;
               padding: 12px 16px;
-              background: rgba(81, 57, 167, 0.15);
+              background: rgba(97, 68, 204, 0.15);
               color: white;
-              border: 1px solid rgba(89, 81, 197, 0.2);
+              border: 1px solid rgba(56, 41, 255, 0.2);
               border-radius: 8px;
               font-size: 14px;
               outline: none;
@@ -4730,6 +4730,28 @@
       statsContainer.style.display = "block";
       statsBtn.innerHTML = '<i class="fas fa-chart-line"></i>';
       statsBtn.title = "Hide Stats";
+    }
+
+    // Update logs
+    const updatelogsBtn = container.querySelector("#updatesBtn")
+
+    if (updatelogsBtn) {
+      updatelogsBtn.addEventListener("click", () => {
+        const isVisible = updatelogscontainer.style.display !== "none"
+        if (isVisible) {
+          updatelogscontainer.style.animation = "settingsFadeOut 0.3s ease-out forwards"
+          setTimeout(() => {
+            updatelogscontainer.style.display = "none"
+            updatelogscontainer.style.animation = ""
+          }, 300)
+        } else {
+          updatelogscontainer.style.top = "50%"
+          updatelogscontainer.style.left = "50%"
+          updatelogscontainer.style.transform = "translate(-50%, -50%)"
+          updatelogscontainer.style.display = "block"
+          updatelogscontainer.style.animation = "settingsSlideIn 0.4s ease-out"
+        }
+      })
     }
 
     const settingsBtn = container.querySelector("#settingsBtn")
