@@ -2836,10 +2836,10 @@
         font-family: ${theme.fontFamily};
         ${CONFIG.currentTheme === "Neon Retro" ? "text-transform: uppercase; letter-spacing: 1px; image-rendering: pixelated;" : ""}
         background: ${CONFIG.currentTheme === "Classic Autobot"
-        ? `linear-gradient(135deg, ${theme.accent} 0%, #4a4a4a 100%)`
+        ? `linear-gradient(135deg, ${theme.accent} 0%, #4338a1ff 100%)`
         : theme.accent
       };
-        ${CONFIG.currentTheme === "Classic Autobot" ? "border: 1px solid rgba(255,255,255,0.1);" : ""}
+        ${CONFIG.currentTheme === "Classic Autobot" ? "border: 1px solid rgba(96, 66, 179, 0.52);" : ""}
       }
 
       ${CONFIG.currentTheme === "Classic Autobot"
@@ -2851,7 +2851,7 @@
         left: -100%;
         width: 100%;
         height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+        background: linear-gradient(90deg, transparent, rgba(53, 61, 168, 0.1), transparent);
         transition: left 0.5s ease;
       }
       .wplace-btn:hover:not(:disabled)::before {
@@ -2865,7 +2865,7 @@
         left: -100%;
         width: 100%;
         height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        background: linear-gradient(90deg, transparent, rgba(51, 62, 156, 0.2), transparent);
         transition: left 0.5s;
       }
       .wplace-btn:hover::before {
@@ -4192,8 +4192,8 @@
               <span>minute(s)</span>
             </div>
             <div style="display:flex; gap:10px;">
-              <button id="notifRequestPermBtn" class="wplace-btn wplace-btn-secondary" style="flex:0.2;"><i class="fas fa-unlock"></i><span>Grant Permission</span></button>
-              <button id="notifTestBtn" class="wplace-btn" style="flex:0.2;"><i class="fas fa-bell"></i><span>Test</span></button>
+              <button id="notifRequestPermBtn" class="wplace-btn wplace-btn-secondary" style="flex:1;"><i class="fas fa-unlock"></i><span>Grant Permission</span></button>
+              <button id="notifTestBtn" class="wplace-btn" style="flex:1;"><i class="fas fa-bell"></i><span>Test</span></button>
             </div>
           </div>
         </div>
