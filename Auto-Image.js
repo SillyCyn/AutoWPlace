@@ -7022,7 +7022,7 @@
     // Delay to ensure resize UI built
     setTimeout(advancedInit, 500);
     
-    setTimeout(Utils.showAlert("Welcome, the newest additions are found in the settings.", "astral"), 1000);
+    setTimeout(Utils.showAlert("Welcome, the newest additions are found in the settings.", "astral"), 6000);
     
     // Add cleanup on page unload
     window.addEventListener('beforeunload', () => {
