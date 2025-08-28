@@ -2548,6 +2548,8 @@
     const style = document.createElement("style")
     style.setAttribute("data-wplace-theme", "true")
 
+    // Style contexts
+
     style.textContent = `
       ${theme.animations.glow
         ? `
@@ -2581,9 +2583,9 @@
       }
 
       @keyframes pulse {
-        0% { box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7); }
-        70% { box-shadow: 0 0 0 10px rgba(0, 255, 0, 0); }
-        100% { box-shadow: 0 0 0 0 rgba(0, 255, 0, 0); }
+        0% { box-shadow: 0 0 0 0 rgba(139, 120, 221, 0.7); }
+        70% { box-shadow: 0 0 0 10px rgba(38, 69, 245, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(62, 87, 233, 0); }
       }
       @keyframes slideIn {
         from { transform: translateY(-10px); opacity: 0; }
@@ -2889,7 +2891,7 @@
       }
       .wplace-btn-upload {
         background: ${CONFIG.currentTheme === "Classic Autobot"
-        ? `linear-gradient(135deg, ${theme.secondary} 0%, #4a4a4a 100%)`
+        ? `linear-gradient(135deg, ${theme.secondary} 0%, #323d9eff 100%)`
         : theme.purple
       };
         color: ${theme.text};
@@ -2949,10 +2951,10 @@
       .wplace-stats {
         background: ${CONFIG.currentTheme === "Classic Autobot" ? "rgba(255,255,255,0.03)" : theme.secondary};
         padding: ${CONFIG.currentTheme === "Neon Retro" ? "12px" : "8px"};
-        border: ${CONFIG.currentTheme === "Neon Retro" ? `2px solid ${theme.text}` : "1px solid rgba(255,255,255,0.1)"};
+        border: ${CONFIG.currentTheme === "Neon Retro" ? `2px solid ${theme.text}` : "1px solid rgba(84, 66, 185, 0.1)"};
         border-radius: ${theme.borderRadius};
         margin-bottom: ${CONFIG.currentTheme === "Neon Retro" ? "15px" : "8px"};
-        ${CONFIG.currentTheme === "Neon Retro" ? "box-shadow: inset 0 0 10px rgba(0, 255, 65, 0.1);" : ""}
+        ${CONFIG.currentTheme === "Neon Retro" ? "box-shadow: inset 0 0 10px rgba(75, 77, 184, 0.1);" : ""}
       }
 
       .wplace-stat-item {
@@ -4187,8 +4189,8 @@
               <span>minute(s)</span>
             </div>
             <div style="display:flex; gap:10px;">
-              <button id="notifRequestPermBtn" class="BUTTON_SECONDARY" style="flex:1;"><i class="fas fa-unlock"></i><span>Grant Permission</span></button>
-              <button id="notifTestBtn" class="BUTTON_SECONDARY" style="flex:1;"><i class="fas fa-bell"></i><span>Test</span></button>
+              <button id="notifRequestPermBtn" class="wplace-btn wplace-btn-secondary" style="flex:1;"><i class="fas fa-unlock"></i><span>Grant Permission</span></button>
+              <button id="notifTestBtn" class="wplace-btn" style="flex:1;"><i class="fas fa-bell"></i><span>Test</span></button>
             </div>
           </div>
         </div>
